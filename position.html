@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>csss position</title>
+    <style>
+        :root{
+    --defcolor:blue;
+    --defdir:column;
+    --defwidth:1px;
+}
+
+        @media only screen and (min-width:600px){
+            .parent{
+                --defcolor:red;
+                --defdir:row;
+                --defwidth:(5px);
+            }
+        }
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .parent{
+            display: flex;
+    flex-direction: var(--defdir);
+            border: solid;
+            border-color: var(--defcolor);
+            border-width: var(--defwidth);
+            margin: 40px;
+            padding: 50px;
+            height:1000px;
+            position: sticky;
+            top: 0;
+        }
+        .box{
+            border: 3px solid blue;
+            height: 433px;
+            width: 1000px;
+            margin: 3px;
+            padding: 3px;
+        }
+        .box1{
+            background-color: var(--defcolor);
+        }
+        .box2{
+            background-color: yellow;
+            position: sticky;
+            top: 0;
+        }
+        .box3{
+            background-color: aliceblue;
+        }
+        .box4{
+            background-color: aqua;
+            position: sticky;
+            top: 0;
+        }
+        .box5{
+            background-color: rgb(55, 70, 70);
+        }
+</style>
+</head>
+<body>
+    <div class="parent">
+        <div class="box box1"></div>
+        <div class="box box2"></div>
+        <div class="box box3"></div>
+        <div class="box box4"></div>
+        <div class="box box5"></div>
+    </div>
+    </body>
+</html>
