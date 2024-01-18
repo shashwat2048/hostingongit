@@ -3,73 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>csss position</title>
+    <title>Shashwat's Portfolio</title>
     <style>
         :root{
-    --defcolor:blue;
-    --defdir:column;
-    --defwidth:1px;
-}
-
-        @media only screen and (min-width:600px){
-            .parent{
-                --defcolor:red;
-                --defdir:row;
-                --defwidth:(5px);
+            --dHsidebar:100vh;
+            --dWsidebar:20vw;
+            --dHcontent:180vh;
+            --dWcontent:80vw;
+            --dflexdir:row;
+            --dPossidebar:sticky;
+            --dAlignmain:start;
+        }
+        @media only screen and (max-width: 767px){
+            .sidebar{
+            --dHsidebar:20vh;
+            --dWsidebar:80vw; 
+            --dPossidebar:static; 
             }
+            .content{
+            --dHcontent:80vh;
+            --dWcontent:80vw;               
+            }
+            .main{
+            --dflexdir:column;
+            --dAlignmain:center;
+            }
+
+        }
+        body{
+            background-color: midnightblue;
+        }
+        .main{
+            display: flex;
+            flex-direction: var(--dflexdir);
+            border: 2px solid midnightblue;
+            border-radius: 1vh;
+            padding: 40px;
+            align-items: var(--dAlignmain);
+            position: static;
+        }
+        .sidebar{
+            height: var(--dHsidebar);
+            width: var(--dWsidebar);
+            position: var(--dPossidebar);
+            top: 10vh;
+        }
+        .content{
+            height: var(--dHcontent);
+            width: var(--dWcontent);
+        }
+        .boxout{
+            border: 2px solid white;
+            border-radius: 3vh;
+            margin-top: 5vh;
+            margin: 2vh;
+            padding: 1vh;
         }
 
-        *{
-            margin: 0;
-            padding: 0;
-        }
-        .parent{
-            display: flex;
-    flex-direction: var(--defdir);
-            border: solid;
-            border-color: var(--defcolor);
-            border-width: var(--defwidth);
-            margin: 40px;
-            padding: 50px;
-            height:1000px;
-            position: sticky;
-            top: 0;
-        }
-        .box{
-            border: 3px solid blue;
-            height: 433px;
-            width: 1000px;
-            margin: 3px;
-            padding: 3px;
-        }
-        .box1{
-            background-color: var(--defcolor);
-        }
-        .box2{
-            background-color: yellow;
-            position: sticky;
-            top: 0;
-        }
-        .box3{
-            background-color: aliceblue;
-        }
-        .box4{
-            background-color: aqua;
-            position: sticky;
-            top: 0;
-        }
-        .box5{
-            background-color: rgb(55, 70, 70);
-        }
-</style>
+    </style>
 </head>
 <body>
-    <div class="parent">
-        <div class="box box1"></div>
-        <div class="box box2"></div>
-        <div class="box box3"></div>
-        <div class="box box4"></div>
-        <div class="box box5"></div>
+    <div class="main">
+        <div class="boxout sidebar">
+        </div>
+        <div class="boxout content">
+            <div class="aboutme"></div>
+            <div class="whatiamdoing">
+                <div class="box box1"></div>
+                <div class="box box2"></div>
+                <div class="box box3"></div>
+                <div class="box box4"></div>
+            </div>
+            <div class="testimonials">
+                <div class="testibox linkedin"></div>
+                <div class="testibox yt"></div>
+            </div>
+        </div>
     </div>
-    </body>
+</body>
 </html>
