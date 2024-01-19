@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <title>Shashwat's Portfolio</title>
     <style>
         :root{
@@ -28,19 +31,32 @@
             --dflexdir:column;
             --dAlignmain:center;
             }
-
+        }
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: "Poppins";
+            color: #F5DD90;
         }
         body{
-            background-color: midnightblue;
+            background-color: #19535F;
         }
         .main{
             display: flex;
             flex-direction: var(--dflexdir);
-            border: 2px solid midnightblue;
+            border: 0px solid ;
             border-radius: 1vh;
             padding: 40px;
             align-items: var(--dAlignmain);
             position: static;
+        }
+        .boxout{
+            border: 0px solid;
+            background-color: #0B7A75;
+            border-radius: 3vh;
+            margin-top: 5vh;
+            margin: 2vh;
+            padding: 1vh;
         }
         .sidebar{
             height: var(--dHsidebar);
@@ -49,16 +65,75 @@
             top: 10vh;
         }
         .content{
-            height: var(--dHcontent);
+            min-height: var(--dHcontent);
             width: var(--dWcontent);
+            padding-left: 4vh;
         }
-        .boxout{
-            border: 2px solid white;
-            border-radius: 3vh;
-            margin-top: 5vh;
+        .line{
+            width: 35px;
+            border: 3px solid #F4743B;
+            border-radius: 3px;
+            margin: 2vh;
+            margin-left: 0;
+        }
+        #intextlink{
+            color: #7EE8FA;
+        }
+        .whatiamdoing{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
+        .box{
+            display: flex;
+            height: 20vh;
+            width: 30vw;
             margin: 2vh;
             padding: 1vh;
+            background-color: #19535F;
+            border: 0px;
+            border-radius: 2vh;
+            justify-content: space-between;
         }
+        .testimonials{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .testibox{
+            display: flex;
+            flex-direction: column;
+            /* justify-content: space-evenly; */
+            align-items: center;
+            height: 40vh;
+            width: 30vw;
+            margin: 2vh;
+            padding: 1vh;
+            padding-left: 0vh;
+            background-color: #19535F;
+            border: 0px;
+            border-radius: 2vh;
+        }
+        .tbox{
+            margin: 2vh;
+        }
+        .graphics{
+            margin: 1vh;
+        }
+        .headtext{
+            margin: 1vh;
+        }
+        .heading{
+            margin: 2vh;
+            margin-top: 4vh;
+            margin-left: 0;
+        }
+        .image{
+            margin: 2vh;
+        }
+        .text{
+            margin: 2vh;
+        }
+
 
     </style>
 </head>
@@ -67,16 +142,77 @@
         <div class="boxout sidebar">
         </div>
         <div class="boxout content">
-            <div class="aboutme"></div>
-            <div class="whatiamdoing">
-                <div class="box box1"></div>
-                <div class="box box2"></div>
-                <div class="box box3"></div>
-                <div class="box box4"></div>
+            <div class="aboutme">
+                <h1 class="heading abtme">About Me</h1>
+                <div class="line"></div>
+                <p>I'm Shashwat Shinghal, an ambitious student currently pursuing B.Tech in Computer Science at Moradabad Institute of Technology.
+
+                    🌟 Science has always fascinated me, and I'm endlessly curious about exploring new frontiers and acquiring diverse skills. I thrive on embracing challenges that allow me to grow both personally and professionally.
+                    
+                    🎥 One of the ways I channel my passion for technology is through my electrifying YouTube channel, 'Technophiles.' With my brilliant engineering colleagues, we embark on exhilarating projects and share our B.Tech journey's most exciting creations! I invite you to join the techno-adventure at
+                    <a href="https://youtube.com/@TECHNOPHILES_" target="_blank" id="intextlink">Technophiles</a> .
+                    
+                    📈 Embracing the philosophy of continuous improvement, I strive to push my boundaries, seeking opportunities to acquire knowledge and enhance my skillset. For me, learning is a lifelong journey, and I'm enthusiastic about discovering the latest advancements in the world of technology.
+                    
+                    💡 As a computer science enthusiast, I'm captivated by the ever-evolving tech landscape and its profound impact on society. I am particularly interested in exploring cutting-edge technologies to tackle real-world challenges creatively.</p>
             </div>
+            <h2 class=" heading doing">What I'm Doing</h2>
+            <div class="whatiamdoing">
+                <div class="box box1">
+                    <div class="image">
+                        <img src="https://www.clipartmax.com/png/middle/16-163429_cell-phone-icon-png-mobile-icon-png.png" alt="" style="height: 80px; width: 40px;">
+                    </div>
+                    <div class="text">
+                        <h3>Lorem 1</h3>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam, eos?</p>
+                    </div>
+                </div>
+                <div class="box box2">
+                    <div class="image">
+                        <img src="https://www.clipartmax.com/png/middle/16-163429_cell-phone-icon-png-mobile-icon-png.png" alt="" style="height: 80px; width: 40px;">
+                    </div>
+                    <div class="text">
+                        <h3>Lorem 2</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, aliquam.</p>
+                    </div>
+                </div>
+                <div class="box box3">
+                    <div class="image">
+                        <img src="https://www.clipartmax.com/png/middle/16-163429_cell-phone-icon-png-mobile-icon-png.png" alt="" style="height: 80px; width: 40px;">
+                    </div>
+                    <div class="text">
+                        <h3>Lorem 3</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, voluptatibus.</p>
+                    </div>
+                </div>
+                <div class="box box4">
+                    <div class="image">
+                        <img src="https://www.clipartmax.com/png/middle/16-163429_cell-phone-icon-png-mobile-icon-png.png" alt="" style="height: 80px; width: 40px;">
+                    </div>
+                    <div class="text">
+                        <h3>Lorem 4</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, esse!</p>
+                    </div>
+                </div>
+            </div>
+            <h2 class=" heading testihead">Testimonials</h2>
             <div class="testimonials">
-                <div class="testibox linkedin"></div>
-                <div class="testibox yt"></div>
+                <div class="testibox linkedin tbox">
+                    <div class="headtext">
+                        <h3>LinkedIn</h3>
+                    </div>
+                    <div class="graphics">
+                        <img style="scale: 0.3;" src="https://hs-marketing-contentful.imgix.net/https%3A%2F%2Fimages.ctfassets.net%2Fp15sglj92v6o%2F6W48RF3DrKsiBbLxZOp9Q5%2Fb6816040623de229ace236abe5b5116a%2Fcustomer-testimonials.png?ixlib=gatsbySourceUrl-2.1.3&auto=format%2C%20compress&q=75&w=1124&h=630&s=8fa73e2fd55d523cad123b4715398b06" alt="">
+                    </div>
+                </div>
+                <div class="testibox yt tbox">
+                    <div class="headtext">
+                        <h3>YouTube</h3>
+                    </div>
+                    <div class="graphics">
+                        <iframe style="scale: 1.15;" src="https://www.youtube.com/embed/_IjjmlWIiEA" frameborder="1" allowfullscreen></iframe>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
