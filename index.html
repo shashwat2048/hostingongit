@@ -14,14 +14,22 @@
             --dHcontent:180vh;
             --dWcontent:80vw;
             --dflexdir:row;
+            --dflexdirside:column;
             --dPossidebar:sticky;
             --dAlignmain:start;
+            --dboxwidthmobile:45%;
+            --defdisplay:flex;
+            --defjustify:start;
+            --defavatarwidth:80%;
+            --defavatarheight:45%;
         }
         @media only screen and (max-width: 767px){
             .sidebar{
-            --dHsidebar:20vh;
+            --dHsidebar:35vh;
             --dWsidebar:80vw; 
             --dPossidebar:static; 
+            --dflexdirside:row;
+            --defjustify:center;
             }
             .content{
             --dHcontent:80vh;
@@ -30,6 +38,19 @@
             .main{
             --dflexdir:column;
             --dAlignmain:center;
+            }
+            .box{
+                --dboxwidthmobile:80%;
+            }
+            .testibox{
+                --dboxwidthmobile:80%;
+            }
+            .info{
+                --defdisplay:none;
+            }
+            .avatarbg{
+            --defavatarwidth:65%;
+            --defavatarheight:50%;
             }
         }
         *{
@@ -49,6 +70,7 @@
             padding: 40px;
             align-items: var(--dAlignmain);
             position: static;
+            justify-content: center;
         }
         .boxout{
             border: 0px solid;
@@ -59,10 +81,16 @@
             padding: 1vh;
         }
         .sidebar{
-            height: var(--dHsidebar);
+            min-height: var(--dHsidebar);
             width: var(--dWsidebar);
             position: var(--dPossidebar);
-            top: 10vh;
+            top: 8vh;
+            display: flex;
+            flex-direction: var(--dflexdirside);
+            padding: 1.5%;
+            padding-top: 5%;
+            justify-content: var(--defjustify);
+
         }
         .content{
             min-height: var(--dHcontent);
@@ -81,13 +109,17 @@
         }
         .whatiamdoing{
             display: flex;
+            flex-direction: var(--dflexdir);
             flex-wrap: wrap;
             justify-content: space-evenly;
+            padding: 20px;
+        }
+        .contenthead{
+            color: #7EE8FA;
         }
         .box{
             display: flex;
-            height: 20vh;
-            width: 30vw;
+            width: var(--dboxwidthmobile);
             margin: 2vh;
             padding: 1vh;
             background-color: #19535F;
@@ -97,27 +129,22 @@
         }
         .testimonials{
             display: flex;
+            flex-direction: var(--dflexdir);
             flex-wrap: wrap;
         }
         .testibox{
             display: flex;
             flex-direction: column;
-            /* justify-content: space-evenly; */
             align-items: center;
             height: 40vh;
-            width: 30vw;
+            width: var(--dboxwidthmobile);
             margin: 2vh;
             padding: 1vh;
             padding-left: 0vh;
             background-color: #19535F;
             border: 0px;
             border-radius: 2vh;
-        }
-        .tbox{
-            margin: 2vh;
-        }
-        .graphics{
-            margin: 1vh;
+            justify-content: center;
         }
         .headtext{
             margin: 1vh;
@@ -133,19 +160,111 @@
         .text{
             margin: 2vh;
         }
-
-
+        iframe{
+            width: 80%;
+            height: 80%;
+            border-radius: 2vh;
+        }
+        .avatarbg{
+            background-color: #D0E4F6;
+            width: var(--defavatarwidth);
+            height: var(--defavatarheight);
+            border-radius: 20px;
+            padding-top: 20px;
+            margin:auto;
+        }
+        .avatar{
+            width:100% ;
+            height:100%;
+            margin: auto;
+        }
+        .sidename{
+            margin-top: 10%;
+            margin-bottom: 10%;
+            text-align: center;
+        }
+        .year{
+            background-color: #19535F;
+            border-radius: 10px;
+            font-size: small;
+            text-align: center;
+            padding: 5px;
+        }
+        .sidehead{
+            margin-bottom: 15%;
+        }
+        ul{
+            list-style-type: none;
+        }
+        li{
+            margin: 20px;
+        }
+        .sideimg{
+            width: auto;
+        }
+        .imgs{
+            width: 45px;
+        }
+        .listitem{
+            display:flex ;
+            align-items: start;
+        }
+        .sidetext{
+            font-size: small;
+            margin-left: 10px ;
+        }
+        .info{
+            display: var(--defdisplay);
+        }
+        .sidecap{
+            color: #BAD7F2;
+        }
     </style>
 </head>
 <body>
     <div class="main">
         <div class="boxout sidebar">
+            <div class="sidehead">
+                <div class="avatarbg"><img src="C:\Users\Dell\Desktop\webd\ska.png" alt="Shashwat Shinghal" class="avatar"></div>
+                <div class="avatarname">
+                    <h2 class="sidename">Shashwat Shinghal</h2>
+                    <div class="year"><p>Student-2nd year(2022-26)</p></div>
+                </div>
+            </div>
+            <div class="info">
+                <ul>
+                    <li>
+                    <div class="listitem">
+                        <div class="sideimg"> <img src="C:\Users\Dell\Desktop\webd\email.png" alt="Email" class="imgs"> </div>
+                        <div class="sidetext"><p class="sidecap">EMAIL</p><p>abc@gmail.com</p></div>
+                    </div>
+                    </li>
+                    <li>
+                    <div class="listitem">    
+                        <div class="sideimg"> <img src="C:\Users\Dell\Desktop\webd\phone-call.png" alt="Phone" class="imgs"> </div>
+                        <div class="sidetext"><p class="sidecap">PHONE</p><p>+91 0911911911</p></div>
+                    </div>
+                    </li>
+                    <li>
+                        <div class="listitem">
+                        <div class="sideimg"> <img src="C:\Users\Dell\Desktop\webd\calendar.png" alt="Birthday" class="imgs"> </div>
+                        <div class="sidetext"><p class="sidecap">BIRTHDAY</p><p>04.07.2004</p></div>
+                    </div>
+                    </li>
+                    <li>
+                        <div class="listitem">
+                        <div class="sideimg"> <img src="C:\Users\Dell\Desktop\webd\placeholder.png" alt="Location" class="imgs"> </div>
+                        <div class="sidetext"><p class="sidecap">LOCATION</p><p>Moradabad</p></div>
+                    </div>
+                    </li>
+                </ul>
+            </div>
         </div>
         <div class="boxout content">
             <div class="aboutme">
                 <h1 class="heading abtme">About Me</h1>
                 <div class="line"></div>
-                <p>I'm Shashwat Shinghal, an ambitious student currently pursuing B.Tech in Computer Science at Moradabad Institute of Technology.
+                <p class="aboutcontent">I'm Shashwat Shinghal, an ambitious student currently pursuing B.Tech in Computer Science at Moradabad Institute of Technology.
 
                     🌟 Science has always fascinated me, and I'm endlessly curious about exploring new frontiers and acquiring diverse skills. I thrive on embracing challenges that allow me to grow both personally and professionally.
                     
@@ -160,58 +279,48 @@
             <div class="whatiamdoing">
                 <div class="box box1">
                     <div class="image">
-                        <img src="https://www.clipartmax.com/png/middle/16-163429_cell-phone-icon-png-mobile-icon-png.png" alt="" style="height: 80px; width: 40px;">
+                        <img src="C:\Users\Dell\Desktop\webd\content.png" alt="" style="height: 60px; width: 60px;">
                     </div>
                     <div class="text">
-                        <h3>Lorem 1</h3>
+                        <h3 class="contenthead">Content Creation</h3>
                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam, eos?</p>
                     </div>
                 </div>
                 <div class="box box2">
                     <div class="image">
-                        <img src="https://www.clipartmax.com/png/middle/16-163429_cell-phone-icon-png-mobile-icon-png.png" alt="" style="height: 80px; width: 40px;">
+                        <img src="C:\Users\Dell\Desktop\webd\www.png" alt="" style="height: 60px; width: 60px;">
                     </div>
                     <div class="text">
-                        <h3>Lorem 2</h3>
+                        <h3 class="contenthead">Web Development</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, aliquam.</p>
                     </div>
                 </div>
                 <div class="box box3">
                     <div class="image">
-                        <img src="https://www.clipartmax.com/png/middle/16-163429_cell-phone-icon-png-mobile-icon-png.png" alt="" style="height: 80px; width: 40px;">
+                        <img src="C:\Users\Dell\Desktop\webd\analytics.png" alt="" style="height: 60px; width: 60px;">
                     </div>
                     <div class="text">
-                        <h3>Lorem 3</h3>
+                        <h3 class="contenthead">Data Analysis</h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, voluptatibus.</p>
                     </div>
                 </div>
                 <div class="box box4">
                     <div class="image">
-                        <img src="https://www.clipartmax.com/png/middle/16-163429_cell-phone-icon-png-mobile-icon-png.png" alt="" style="height: 80px; width: 40px;">
+                        <img src="C:\Users\Dell\Desktop\webd\teamwork.png" alt="" style="height: 60px; width: 60px;">
                     </div>
                     <div class="text">
-                        <h3>Lorem 4</h3>
+                        <h3 class="contenthead">Networking</h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, esse!</p>
                     </div>
                 </div>
             </div>
-            <h2 class=" heading testihead">Testimonials</h2>
+            <h2 class=" heading">YouTube Channel</h2>
             <div class="testimonials">
-                <div class="testibox linkedin tbox">
-                    <div class="headtext">
-                        <h3>LinkedIn</h3>
-                    </div>
-                    <div class="graphics">
-                        <img style="scale: 0.3;" src="https://hs-marketing-contentful.imgix.net/https%3A%2F%2Fimages.ctfassets.net%2Fp15sglj92v6o%2F6W48RF3DrKsiBbLxZOp9Q5%2Fb6816040623de229ace236abe5b5116a%2Fcustomer-testimonials.png?ixlib=gatsbySourceUrl-2.1.3&auto=format%2C%20compress&q=75&w=1124&h=630&s=8fa73e2fd55d523cad123b4715398b06" alt="">
-                    </div>
+                <div class="testibox vid1">
+                    <iframe src="https://www.youtube.com/embed/_IjjmlWIiEA" frameborder="0"></iframe>
                 </div>
-                <div class="testibox yt tbox">
-                    <div class="headtext">
-                        <h3>YouTube</h3>
-                    </div>
-                    <div class="graphics">
-                        <iframe style="scale: 1.15;" src="https://www.youtube.com/embed/_IjjmlWIiEA" frameborder="1" allowfullscreen></iframe>
-                    </div>
+                <div class="testibox vid2">
+                    <iframe src="https://www.youtube.com/embed/XoobK7ovYzg" frameborder="0"></iframe>
                 </div>
             </div>
         </div>
